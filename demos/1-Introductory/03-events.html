@@ -5,13 +5,24 @@
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
   </head>
   <body>
+    <div id="docReady">
+    </div>
+
+    <hr>
+
     <div id="clickMe" style="cursor: pointer; padding: 20; font-size: 30px; color: rebeccapurple;">
       Click Me
     </div>
-    <div id="status">
-    </div>
+    <div id="status"></div>
+
+    <hr>
 
     <script>
+      $('document').ready(function() 
+      {
+        $('#docReady').html('Document is ready!');
+      })
+
       $('#clickMe').click(function() 
       {
         $('#status').html('You clicked!');
